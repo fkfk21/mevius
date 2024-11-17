@@ -1,0 +1,14 @@
+{
+  "flake8.args": [
+    "--max-line-length=1000",  // 100
+    "--ignore=E203,W503,F401,E266,F841,E302,E126,E261,E226,E262,W391,E123,E225,E241,E131,E301,E221,E111,E117",  
+
+
+    // ホントは除外したくない: E262,E226
+    // F841: unused variable
+  ],
+
+  "python.analysis.extraPaths": [
+    "/opt/ros/humble/lib/python3.10/site-packages",
+  ]
+}

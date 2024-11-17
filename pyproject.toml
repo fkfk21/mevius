@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "mevius"
+version = "0.1.0"
+description = ""
+authors = ["Kenji Fukuda <fk.kenji.21@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+torch = {version = "2.4.0+cu121", source = "pytorch_121"}
+numpy = "^2.1.2"
+urdf-parser-py = "^0.0.4"
+bitstring = "^4.2.3"
+ipdb = "^0.13.13"
+mujoco = "<3.2"
+mujoco-python-viewer = "^0.1.4"
+
+
+[[tool.poetry.source]]
+name = "pytorch_121"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "supplemental"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -93,7 +93,7 @@ def get_policy_observation(base_quat_, base_lin_vel_, base_ang_vel_, command_, d
     is_standing = torch.tensor([[torch.norm(command[:, :3]) < 0.03]])
 
     obs = torch.cat((base_lin_vel * obs_scales.lin_vel, # 3D
-                     base_ang_vel  * obs_scales.ang_vel, # 3D
+                     base_ang_vel * obs_scales.ang_vel, # 3D
                      projected_gravity, # 3D
                      command[:, :3] * command_scale, # 3D
                      (dof_pos - default_dof_pos) * obs_scales.dof_pos, # 12D

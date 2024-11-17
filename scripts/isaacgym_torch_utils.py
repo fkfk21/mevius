@@ -120,7 +120,7 @@ def get_axis_params(value, axis_idx, x_value=0., dtype=np.float32, n_dims=3):
 
 
 def copysign(a, b):
-    # type: (float, Tensor) -> Tensor
+    # type: (float, torch.Tensor) -> torch.Tensor
     a = torch.tensor(a, device=b.device, dtype=torch.float).repeat(b.shape[0])
     return torch.abs(a) * torch.sign(b)
 
